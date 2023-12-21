@@ -34,6 +34,11 @@ const argv = yargs
     default: false,
     describe: 'run a GUI chrome instead of headless mode',
   })
+  .option('e', {
+    alias: 'exit',
+    default: false,
+    describe: 'exit process with exit code 0 once successed',
+  })
   .argv;
 
 pipeline({
@@ -42,5 +47,6 @@ pipeline({
   names: argv.n.toString().includes(',') ? argv.n.split(',') : [argv.n],
   outputDir: argv.o,
   forceOverride: argv.f,
-  visible: argv.visible,
+  visible: argv.v,
+  exit: argv.e,
 });

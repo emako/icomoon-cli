@@ -27,6 +27,7 @@ Commands:
   -o, --output     output directory
   -f, --force      force override current icon when icon name duplicated
   -v, --visible    run a GUI chrome instead of headless mode
+  -e, --exit    exit process with exit code 0 once successed
 
 Example Usage: icomoon-cli -i test-assets/1.svg,test-assets/2.svg -s test-assets/selection.json -n newname1,newname2 -o output
 ```

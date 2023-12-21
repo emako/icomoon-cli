@@ -214,6 +214,9 @@ async function pipeline(options = {}) {
       if (whenFinished) {
         whenFinished({ outputDir });
       }
+      if (options.exit) {
+        process.exit(0);
+      }
     });
   } catch (error) {
     console.error(error);
